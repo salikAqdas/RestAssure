@@ -73,7 +73,7 @@ function changeTextColor(e) {
         default:
             break;
     }
-    if(e.value != "get"){
+    if(e.value != "GET"){
         document.getElementById("request-body-label").style.display = "initial";
     }
 }
