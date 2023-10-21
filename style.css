@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import './request.css';
+@import './response.css';
+:root{
+    --primary-color:#0ebfff;
+    --primary-color:#2f80ee;
+    --primary-color-faded:#0ebfff4d;
+    --primary-color-faded:#2f80ee4d;
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+#progress-container{
+    height: 100vh;
+    width: 100vw;
+    background: #0000002e url(./loader.gif) no-repeat center center;
+    background-size: 100px 100px;
+    position: fixed;
+    z-index: 100;
+    display: none;
+
+}
+select:focus-visible, 
+textarea:focus-visible,
+input:focus-visible{
+    outline: none;
+}
+body{
+    background-color: #d7d7d770;
+}
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 8px;
+    margin-bottom:10px;
+    align-items: center;
+}
+.nav-container .logo{
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--primary-color);
+    font-family: cursive;
+}
+.nav-container img{
+    width: 50px;
+}
+.main-container{
+    display:grid;
+    grid-template-columns: 1fr 5fr;
+}
+.card{
+    padding: 24px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 5px var(--primary-color-faded);
+    margin: 10px;
+}
+h1 , h2  , h3 , h4, h5 h6{
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+.text-cen{
+    text-align: center;
+}
+.sidebar{
+    /* border: 1px solid black; */
+}
+.mid-con{
+    /* border: 1px solid red; */
+}
+.flex-box{
+    display: flex;
+}
+.btn{
+    padding: 8px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    border: none;
+    color: #fff;
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+}
+.btn:hover{
+    color: var(--primary-color);
+    background-color: #fff;
+    transition: background-color .5s;
+}
+.get{
+    color: green;
+}
+.post , .put{
+    color: #b59601;
+}
+.delete{
+    color: red;
+}
+#save-btn-container{
+    text-align: end;
+    padding: 10px;
+}
+#save-btn{
+    font-size: 16px;
+    font-weight: 600;
+}

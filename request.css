@@ -1,0 +1,100 @@
+.request select{
+    border:1px solid var(--primary-color);
+    border-radius: 5px;
+    /* padding: 2px; */
+    color: green;
+    font-size: 14px;
+    font-weight: bold;
+}
+.request input{
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    margin: 0 10px;
+    padding: 2px;
+}
+.request .btn{
+    /* margin-left: 10px; */
+    cursor: pointer;
+    font-size: 16px;
+    border: 1px solid var(--primary-color);
+    font-weight: 600;
+}
+.request .btn:hover{
+    background-color: #fff;
+    color: var(--primary-color);
+    transition: background-color .5s;
+}
+.request-body{
+    margin: 12px;
+}
+.request-body input[type = "radio"]{
+    margin: 12px;
+}
+
+.request-body textarea{
+    width: 100%;
+    border-color: var(--primary-color);
+}
+.request-body .header-container td{
+    padding: 8px;
+    border: 1px solid #000;
+}
+.custom-parameter-container{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    column-gap: 10px;
+    margin-bottom: 10px;
+}
+.custom-parameter-container input{
+    width: 100%;
+    font-size: 16px;
+    height: 30px;
+}
+.request-body-tabs input{
+    display: none;
+    
+}
+.request-body-tabs{
+    padding: 10px;
+    margin:  5px;
+    cursor: pointer;
+}
+.request-body-tabs:hover{
+    border-bottom: 2px solid var(--primary-color);
+    border-radius: 2px;
+}
+.active-tab{
+    border-bottom: 2px solid var(--primary-color);
+
+}
+#addCustomParam-btn{
+    border: 0;
+}
+#addCustomParam-btn{
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 25px;
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+    width: 50px;
+}
+#addCustomParam-btn:hover{
+    background-color: #fff;
+    color: var(--primary-color);
+}
+#delCustomParam-btn{
+    border-radius: 10px;
+    background-color: #fff;
+    color: red;
+    font-size: 25px;
+    border: 1px solid red;
+    cursor: pointer;
+    width: 50px;
+}
+#delCustomParam-btn:hover{
+    background-color: red;
+    color: #fff;
+}

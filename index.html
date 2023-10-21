@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./api.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css">
+    <title>RESTAssure</title>
+</head>
+
+<body>
+    <div id="progress-container"></div> 
+    <div class="nav-container">
+        <div class="logo">
+            RESTAssure
+        </div>
+        <div class="myProfile">
+            <img src="https://t3.ftcdn.net/jpg/05/17/79/88/360_F_517798849_WuXhHTpg2djTbfNf0FQAjzFEoluHpnct.jpg"
+                alt=" image not found">
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="sidebar">
+            <div class="card">
+                <h4 class="">
+                    My Requests
+                </h4>
+                <div id="myaddedReq">
+
+                </div>
+            </div> 
+        </div>
+        <div class="mid-con">
+            <div class="request-container card">
+                <div class="flex-box request">
+                    <select name="requestType" id="requestType" onchange="changeTextColor(this)">
+                        <option value="GET">GET</option>
+                        <option value="POST">POST</option>
+                        <option value="PUT">PUT</option>
+                        <option value="DELETE">DELETE</option>
+                    </select>
+                    <input type="text" name="req-url" id="req-url" placeholder="Enter URL here...">
+                    <button class="sendrequest btn" onclick="sendReq()">Send Request</button>
+                </div>
+                <br>
+                <div class="request-body">
+                    <label for="requestBody-head" id="request-header-label" onclick="showRequestHeader()"
+                        class="request-body-tabs active-tab">
+                        <input type="radio" name="requestBody" id="requestBody-head" checked>Header </label>
+                    <label for="requestBody-body" style="display: none;" class="request-body-tabs"
+                        onclick="showRequestBody()" id="request-body-label">
+                        <input type="radio" name="requestBody" id="requestBody-body">Body </label>
+                    <br><br>
+                    <div class="header-container" id="request-header">
+                        <label for="paramJson-radio" id="paramJson-radio-label">
+                            <input type="radio" name="param-radio" value="json" id="paramJson-radio" checked>
+                            JSON
+                        </label>
+                        <label for="paramcustom-radio" id="customparam-radio-label">
+                            <input type="radio" name="param-radio" value="customParam" id="paramcustom-radio">
+                            Custom Parameters
+                        </label>
+
+                        <div id="json-param-div">
+                            <textarea name="" id="json-param" cols="30" rows="10"></textarea>
+                        </div>
+
+                        <div id="custom-param-div" style="display: none;">
+                            <div class="custom-parameter-container" id="custom-param-container">
+                                <input type="text" name="" id="custom-param-key-1" placeholder="Enter key here">
+                                <input type="text" name="" id="custom-param-value-1" placeholder="Enter value here">
+                                <button id="addCustomParam-btn">+</button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="requestbody-ta" id="request-body" style="display:none;">
+                        <textarea name="" id="request-body-textarea" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+                <div id="save-btn-container">
+                    <button id="save-btn" class = "btn">Save</button>
+                </div>
+
+            </div>
+            <div class="response-container card">
+                <div class="beautify-container">
+                    <h4>Response</h4>
+                    <div>
+                        <button class="btn" id="beautify">Beautify</button>
+                        <button class="btn" id="copy">Copy</button>
+                    </div>
+                </div>
+                <textarea name="" cols="30" rows="10" readonly id="response-textarea"></textarea>
+            </div>
+        </div>
+    </div>
+    <script>
+
+    </script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
